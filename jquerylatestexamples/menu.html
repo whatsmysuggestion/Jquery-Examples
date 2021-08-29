@@ -1,0 +1,34 @@
+ <html lang="en">
+<head>
+    <link rel="stylesheet" href="jquery-ui.css">
+  <script src="jquery-1.10.2.js"></script>
+  <script src="jquery-ui.js"></script>
+   <script>
+  $(function() {
+    $( "#menu" ).menu();
+  });
+  </script>
+  <style>
+  .ui-menu { width: 150px; }
+  </style>
+</head>
+<body>
+ 
+<ul id="menu">
+  <li class="ui-state-disabled">First</li>
+  <li>Second</li>
+
+  <li>Third
+    <ul>
+      <li class="ui-state-disabled">A</li>
+      <li>B</li>
+      <li>C</li>
+    </ul>
+  </li>
+   
+  <li class="ui-state-disabled">End</li>
+</ul>
+ 
+ 
+</body>
+</html>

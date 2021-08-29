@@ -1,0 +1,334 @@
+1.
+<html>
+<head>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$("p").click(function(){
+$(this).hide();
+});
+});
+</script>
+</head>
+
+<body>
+<p>If you click on me, I will disappear.</p>
+</body>
+
+</html>
+
+2.
+
+<html>
+<head>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").hide();
+  });
+});
+</script>
+</head>
+
+<body>
+<h2>This is a heading</h2>
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+<button>Click me</button>
+</body>
+
+</html>  
+
+3.
+<html>
+<head>
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript"> 
+$(document).ready(function(){
+  $(".flip").click(function(){
+    $(".panel").slideUp("slow");
+  });
+});
+</script>
+ 
+<style type="text/css"> 
+div.panel,p.flip
+{
+margin:0px;
+padding:5px;
+text-align:center;
+background:#e5eecc;
+border:solid 1px #c3c3c3;
+}
+div.panel
+{
+height:120px;
+}
+</style>
+</head>
+ 
+<body>
+ 
+<div class="panel">
+<p>Because time is valuable, we deliver quick and easy learning.</p>
+<p>At W3Schools, you can study everything you need to learn, in an accessible and handy format.</p>
+</div>
+ 
+<p class="flip">Hide Panel</p>
+ 
+</body>
+</html>
+
+
+
+ 
+
+4.
+
+<html>
+<head>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("button").click(function(){
+    $(this).hide();
+  });
+});
+</script>
+</head>
+
+<body>
+<button>Click me</button>
+</body>
+</html>
+
+
+
+
+<html>
+<head>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").hide();
+  });
+});
+</script>
+</head>
+
+<body>
+<h2>This is a heading</h2>
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+<button>Click me</button>
+</body>
+</html>
+
+
+
+
+<html>
+<head>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#test").hide();
+  });
+});
+</script>
+</head>
+
+<body>
+<h2>This is a heading</h2>
+<p>This is a paragraph.</p>
+<p id="test">This is another paragraph.</p>
+<button>Click me</button>
+</body>
+
+</html>
+
+
+
+
+<html>
+<head>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#test").click(function(){
+  $(this).fadeOut();
+  });
+});
+</script>
+</head>
+
+<body>
+<div id="test" style="background:yellow;width:200px">CLICK ME AWAY!</div>
+<p>If you click on the box above, it will be removed.</p>
+</body>
+
+</html>
+
+
+
+
+<html>
+<head>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".ex .hide").click(function(){
+    $(this).parents(".ex").hide("slow");
+  });
+});
+</script>
+<style type="text/css"> 
+div.ex
+{
+background-color:#e5eecc;
+padding:7px;
+border:solid 1px #c3c3c3;
+}
+</style>
+</head>
+<body>
+
+<h3>Island Trading</h3>
+<div class="ex">
+<button class="hide">Hide me</button>
+<p>Contact: Helen Bennett<br /> 
+Garden House Crowther Way<br />
+London</p>
+</div>
+
+<h3>Paris spécialités</h3>
+<div class="ex">
+<button class="hide">Hide me</button>
+<p>Contact: Marie Bertrand<br /> 
+265, Boulevard Charonne<br />
+Paris</p>
+</div>
+
+</body>
+</html>
+
+
+
+
+<html>
+<head>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript"> 
+$(document).ready(function(){
+  $("button").click(function(){
+    $("div").animate({height:300},"slow");
+    $("div").animate({width:300},"slow");
+    $("div").animate({height:100},"slow");
+    $("div").animate({width:100},"slow");
+  });
+});
+</script> 
+</head>
+ 
+<body>
+<button>Start Animation</button>
+<br /><br />
+<div style="background:#98bf21;height:100px;width:100px;position:relative">
+</div>
+</body>
+</html>
+
+
+
+
+<html>
+<head>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").html("W3Schools");
+  });
+});
+</script>
+</head>
+
+<body>
+<h2>This is a heading</h2>
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+<button>Click me</button>
+</body>
+</html>
+
+
+
+
+
+<html>
+<head>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").append(" <b>W3Schools</b>.");
+  });
+});
+</script>
+</head>
+
+<body>
+<h2>This is a heading</h2>
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+<button>Click me</button>
+</body>
+</html>
+
+
+
+
+<html>
+<head>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").after(" W3Schools.");
+  });
+});
+</script>
+</head>
+
+<body>
+<h2>This is a heading</h2>
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+<button>Click me</button>
+</body>
+</html>
+
+<html>
+<head>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("button").click(function(){
+    $("div").load('test1.txt');
+  });
+});
+</script>
+</head>
+<body>
+
+<div><h2>Let AJAX change this text</h2></div>
+<button>Change Content</button>
+
+</body>
+</html>
+
+

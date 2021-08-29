@@ -1,0 +1,132 @@
+
+-----------------------
+using javascript
+
+<html>
+
+<head>
+<style>
+h1 {
+    border-bottom: 3px solid #cc9900;
+    color: #996600;
+    font-size: 30px;
+}
+table, th , td {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 5px;
+}
+table tr:nth-child(odd) {
+    background-color: #f1f1f1;
+}
+table tr:nth-child(even) {
+    background-color: #ffffff;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Customers</h1>
+<div id="id01"></div>
+
+<script>
+var xmlhttp = new XMLHttpRequest();
+var url = "http://www.w3schools.com/website/customers_mysql.php";
+
+xmlhttp.onreadystatechange=function() {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        myFunction(xmlhttp.responseText);
+    }
+}
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+
+function myFunction(response) {
+    var arr = JSON.parse(response);
+    var i;
+    var out = "<table>";
+
+    for(i = 0; i < arr.length; i++) {
+        out += "<tr><td>" +
+        arr[i].Name +
+        "</td><td>" +
+        arr[i].City +
+        "</td><td>" +
+        arr[i].Country +
+        "</td></tr>";
+    }
+    out += "</table>";
+    document.getElementById("id01").innerHTML = out;
+}
+</script>
+
+</body>
+</html>
+
+
+----------------------------
+
+using jquery
+
+<html>
+<head>
+<script type="text/javascript" src="jquery.js">
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("button").click(function(){
+    $("div").load('test1.txt');
+  });
+});
+</script>
+</head>
+<body>
+
+<div><h2>Let AJAX change this text</h2></div>
+<button>Change Content</button>
+
+</body>
+</html>
+
+
+----------------------------------
+
+<html>
+<head>
+<script type="text/javascript" src="jquery.js">
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("button").click(function(){
+   
+   $.get("http://www.w3schools.com/website/customers_mysql.php",function(data,status){
+	  
+var arr = JSON.parse(data);
+    var i;
+    var out = "<table>";
+
+    for(i = 0; i < arr.length; i++) {
+        out += "<tr><td>" +
+        arr[i].Name +
+        "</td><td>" +
+        arr[i].City +
+        "</td><td>" +
+        arr[i].Country +
+        "</td></tr>";
+    }
+    out += "</table>";
+	   document.getElementById("id01").innerHTML = out;
+   })
+   
+  });
+});
+</script>
+</head>
+<body>
+
+<div><h2>Let AJAX change this text</h2></div>
+<button>Change Content</button>
+<div id="id01"></div>
+</body>
+</html>
